@@ -27,3 +27,5 @@ npm.cmd run build
 - Asset URLs are configured as relative, so the site can run from `/` or a subfolder.
 - Storyboard images are read from `public/images/storyboard/`.
 - If you replace the storyboard files, rebuild before deploying.
+- There are no required custom environment variables for this project.
+- Importable placeholder env file: `.env.example`

@@ -208,32 +208,32 @@ export const siteContent = {
     items: [
       {
         label: "Optik Katmanlar",
-        value: 9500,
+        value: 10000,
         detail: "Optik lensler, reflektif yüzeyler ve koruyucu katman prototiplemesi"
       },
       {
         label: "Gövde ve Mekanik Üretim",
-        value: 6200,
+        value: 7000,
         detail: "Çerçeve, bağlantı yüzeyleri ve gövde üretim denemeleri"
       },
       {
         label: "Mikro Görüntüleme / Yansıtma",
-        value: 8750,
+        value: 9000,
         detail: "Görüntü kaynağı, optik hizalama ve yansıtma testleri"
       },
       {
         label: "Mobil Bağlantı ve Kontrol",
-        value: 3600,
+        value: 4000,
         detail: "Telefon arayüzü, eşleşme mantığı ve demo kontrol akışı"
       },
       {
         label: "Prototipleme ve Test",
-        value: 4900,
+        value: 5000,
         detail: "Montaj, sunum testleri ve iteratif deneme maliyeti"
       }
     ],
     totalLabel: "Toplam Tahmini Bütçe",
-    totalValue: 32950
+    totalValue: 35000
   },
   closing: {
     eyebrow: "Kapanış",
