@@ -272,6 +272,31 @@ const initSectionReveals = (reducedMotion) => {
   });
 };
 
+const initChallengeReveals = (reducedMotion) => {
+  const section = document.querySelector("#challenges");
+  const cards = gsap.utils.toArray("[data-challenge-card]");
+
+  if (!section || !cards.length) return;
+
+  if (reducedMotion) {
+    gsap.set(cards, { autoAlpha: 1, y: 0, clearProps: "transform" });
+    return;
+  }
+
+  gsap.from(cards, {
+    autoAlpha: 0,
+    y: 24,
+    duration: 0.9,
+    stagger: 0.12,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: section,
+      start: "top 78%",
+      once: true
+    }
+  });
+};
+
 const initBudgetCounters = (reducedMotion) => {
   const counters = gsap.utils.toArray("[data-budget-value]");
 
@@ -315,6 +340,7 @@ export const initAnimations = () => {
   revealHero(reducedMotion);
   initFrameSequence(reducedMotion);
   initSectionReveals(reducedMotion);
+  initChallengeReveals(reducedMotion);
   initBudgetCounters(reducedMotion);
 
   ScrollTrigger.refresh();

@@ -119,6 +119,22 @@ const conceptLayerMarkup = siteContent.opticalConcept.layers
   )
   .join("");
 
+const challengesMarkup = siteContent.challenges.items
+  .map(
+    (item) => `
+      <article class="challenge-card glass-panel" data-challenge-card>
+        <h3>${item.title}</h3>
+        <span class="challenge-card__label">Sorun</span>
+        <p class="challenge-card__problem">${item.problem}</p>
+        <span class="challenge-card__label">Çözüm / Plan B</span>
+        <ul class="challenge-card__list">
+          ${item.solutions.map((solution) => `<li>${solution}</li>`).join("")}
+        </ul>
+      </article>
+    `
+  )
+  .join("");
+
 const budgetCardsMarkup = siteContent.budget.items
   .map(
     (item) => `
@@ -252,6 +268,20 @@ app.innerHTML = `
               ${conceptLayerMarkup}
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="challenges" class="section-block section-block--challenges">
+      <div class="section-inner">
+        <header class="section-heading" data-reveal>
+          <span class="section-kicker">${siteContent.challenges.eyebrow}</span>
+          <h2>${siteContent.challenges.title}</h2>
+          <p>${siteContent.challenges.description}</p>
+        </header>
+
+        <div class="challenges-grid">
+          ${challengesMarkup}
         </div>
       </div>
     </section>

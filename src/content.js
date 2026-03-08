@@ -200,6 +200,53 @@ export const siteContent = {
       }
     ]
   },
+  challenges: {
+    eyebrow: "Risk Yönetimi",
+    title: "Karşılaşılabilecek Problemler ve Çözüm Yaklaşımları",
+    description:
+      "Teknik geliştirme sürecinde karşılaşılabilecek ana riskler ve bu riskleri yönetmek için planlanan çözüm adımları aşağıda özetlenmiştir.",
+    items: [
+      {
+        title: "Görüntü Yansıma Problemi",
+        problem:
+          "OLED ekran görüntüsünün reflektif cam üzerinde yeterince net yansımaması.",
+        solutions: [
+          "Farklı reflektif kaplama seçeneklerinin test edilmesi",
+          "Optik katman konumunun ayarlanması",
+          "Yansıma açısının optimize edilmesi"
+        ]
+      },
+      {
+        title: "Dış Ortam Parlaklığı",
+        problem: "Güneşli ortamlarda görüntü kontrastının düşmesi.",
+        solutions: [
+          "OLED parlaklık seviyesinin artırılması",
+          "Yüksek kontrastlı arayüz tasarımı",
+          "Reflektif katmanın optimize edilmesi"
+        ]
+      },
+      {
+        title: "Güç Tüketimi",
+        problem:
+          "Taşınabilir sistemlerde batarya kullanım süresinin sınırlı olması.",
+        solutions: [
+          "Düşük güç tüketimli bileşenler",
+          "Ekranın gerektiğinde kapatılması",
+          "Güç yönetimi optimizasyonu"
+        ]
+      },
+      {
+        title: "Mekanik Entegrasyon",
+        problem:
+          "Elektronik ve optik sistemlerin gözlük yapısına yerleştirilmesi.",
+        solutions: [
+          "Modüler yerleşim tasarımı",
+          "Prototip mekanik testler",
+          "3D prototipleme"
+        ]
+      }
+    ]
+  },
   budget: {
     eyebrow: "Tahmini Bütçe",
     title: "Konseptten prototipe uzanan maliyet dağılımı",
