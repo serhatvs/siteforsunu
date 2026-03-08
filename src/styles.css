@@ -602,8 +602,17 @@ a {
   min-height: 12rem;
 }
 
+.section-block--original-value,
+.section-block--feasibility,
 .section-block--challenges {
   padding-top: clamp(4.5rem, 8vw, 7rem);
+}
+
+.value-grid,
+.feasibility-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
 }
 
 .challenges-grid {
@@ -612,8 +621,9 @@ a {
   gap: 1rem;
 }
 
+.value-card,
+.feasibility-card,
 .challenge-card {
-  min-height: 22rem;
   padding: 1.35rem;
   display: grid;
   align-content: start;
@@ -627,6 +637,17 @@ a {
     transform 180ms ease;
 }
 
+.value-card,
+.feasibility-card {
+  min-height: 17rem;
+}
+
+.challenge-card {
+  min-height: 22rem;
+}
+
+.value-card:hover,
+.feasibility-card:hover,
 .challenge-card:hover {
   border-color: var(--panel-border-strong);
   box-shadow:
@@ -636,10 +657,33 @@ a {
   transform: translateY(-2px);
 }
 
+.value-card h3,
+.feasibility-card h3,
 .challenge-card h3 {
   font-size: 1.35rem;
   line-height: 1.2;
   color: var(--platinum-white);
+}
+
+.value-card p,
+.feasibility-card__flow,
+.challenge-card__problem {
+  line-height: 1.75;
+  color: var(--mist-silver);
+}
+
+.value-card p {
+  margin-top: 0.15rem;
+}
+
+.feasibility-card__flow {
+  padding: 1rem 1.05rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(245, 246, 247, 0.1);
+  background:
+    linear-gradient(180deg, rgba(245, 246, 247, 0.05), rgba(245, 246, 247, 0.02)),
+    rgba(245, 246, 247, 0.03);
+  box-shadow: inset 0 1px 0 rgba(245, 246, 247, 0.05);
 }
 
 .challenge-card__label {
@@ -656,11 +700,7 @@ a {
   color: var(--mist-silver);
 }
 
-.challenge-card__problem {
-  line-height: 1.75;
-  color: var(--mist-silver);
-}
-
+.feasibility-card__list,
 .challenge-card__list {
   display: grid;
   gap: 0.7rem;
@@ -669,6 +709,7 @@ a {
   list-style: none;
 }
 
+.feasibility-card__list li,
 .challenge-card__list li {
   position: relative;
   padding-left: 1.2rem;
@@ -676,6 +717,7 @@ a {
   color: var(--mist-silver);
 }
 
+.feasibility-card__list li::before,
 .challenge-card__list li::before {
   content: "";
   position: absolute;
@@ -864,6 +906,8 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .value-grid,
+  .feasibility-grid,
   .challenges-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -878,10 +922,6 @@ a {
   }
 
   .budget-breakdown__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .challenges-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -914,9 +954,12 @@ a {
   }
 
   .hero__panel-grid,
+  .value-grid,
+  .feasibility-grid,
   .budget-grid,
   .frame-list-card,
-  .concept-layers__grid {
+  .concept-layers__grid,
+  .challenges-grid {
     grid-template-columns: 1fr;
   }
 

@@ -119,6 +119,39 @@ const conceptLayerMarkup = siteContent.opticalConcept.layers
   )
   .join("");
 
+const originalValueMarkup = siteContent.originalValue.items
+  .map(
+    (item) => `
+      <article class="value-card glass-panel" data-reveal>
+        <h3>${item.title}</h3>
+        <p>${item.text}</p>
+      </article>
+    `
+  )
+  .join("");
+
+const feasibilityMarkup = siteContent.feasibility.items
+  .map((item) => {
+    if (item.flow) {
+      return `
+        <article class="feasibility-card glass-panel" data-reveal>
+          <h3>${item.title}</h3>
+          <div class="feasibility-card__flow">${item.flow}</div>
+        </article>
+      `;
+    }
+
+    return `
+      <article class="feasibility-card glass-panel" data-reveal>
+        <h3>${item.title}</h3>
+        <ul class="feasibility-card__list">
+          ${item.bullets.map((bullet) => `<li>${bullet}</li>`).join("")}
+        </ul>
+      </article>
+    `;
+  })
+  .join("");
+
 const challengesMarkup = siteContent.challenges.items
   .map(
     (item) => `
@@ -268,6 +301,34 @@ app.innerHTML = `
               ${conceptLayerMarkup}
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block section-block--original-value">
+      <div class="section-inner">
+        <header class="section-heading" data-reveal>
+          <span class="section-kicker">${siteContent.originalValue.eyebrow}</span>
+          <h2>${siteContent.originalValue.title}</h2>
+          <p>${siteContent.originalValue.description}</p>
+        </header>
+
+        <div class="value-grid">
+          ${originalValueMarkup}
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block section-block--feasibility">
+      <div class="section-inner">
+        <header class="section-heading" data-reveal>
+          <span class="section-kicker">${siteContent.feasibility.eyebrow}</span>
+          <h2>${siteContent.feasibility.title}</h2>
+          <p>${siteContent.feasibility.description}</p>
+        </header>
+
+        <div class="feasibility-grid">
+          ${feasibilityMarkup}
         </div>
       </div>
     </section>

@@ -200,6 +200,55 @@ export const siteContent = {
       }
     ]
   },
+  originalValue: {
+    eyebrow: "Özgün Değer",
+    title: "Projenin Özgün Değeri",
+    description:
+      "Dijital Kayak Gözlüğü, kayak sırasında ihtiyaç duyulan temel bilgileri kullanıcının dikkatini dağıtmadan görüş alanına taşımayı hedefleyen bir giyilebilir teknoloji prototipidir. Projenin özgün değeri yalnızca veri göstermesi değil, bunu spor kullanım senaryosuna uygun, kompakt ve uygulanabilir bir yapı ile sunmayı hedeflemesidir.",
+    items: [
+      {
+        title: "Görüş Alanında Veri Gösterimi",
+        text: "Kullanıcının hız, yön ve benzeri verilere ulaşmak için telefon ekranına bakmasına gerek kalmadan, bu bilgilerin gözlük camı üzerinden görüntülenmesi hedeflenmektedir."
+      },
+      {
+        title: "Reflektif Optik Yaklaşım",
+        text: "Verilerin doğrudan ayrı bir ekran yerine reflektif katman üzerinden sunulması, sistemin daha doğal ve spor sırasında daha kullanılabilir bir deneyim sunmasını amaçlamaktadır."
+      },
+      {
+        title: "Geliştirilebilir Prototip Mimarisi",
+        text: "Proje, ilk aşamada çalışabilir bir prototip üretmeyi; ilerleyen aşamalarda ise daha kompakt devre yapısı, özel PCB ve gelişmiş optik sistemle geliştirilmeyi hedeflemektedir."
+      }
+    ]
+  },
+  feasibility: {
+    eyebrow: "Yapılabilirlik",
+    title: "Projenin Yapılabilirliği",
+    description:
+      "Proje, günümüzde erişilebilir olan temel donanım bileşenleri ve prototipleme yöntemleri kullanılarak geliştirilebilecek bir sistem yapısına sahiptir. Amaç, ilk aşamada temel işlevleri çalışan bir prototip oluşturmak ve ardından sistemi iyileştirmektir.",
+    items: [
+      {
+        title: "Teknik Yaklaşım",
+        flow: "Telefon uygulaması → Kablosuz veri aktarımı → Kontrol devresi → OLED gösterim modülü → Reflektif optik katman → Kullanıcı görüş alanında veri"
+      },
+      {
+        title: "Neden Yapılabilir?",
+        bullets: [
+          "Kullanılacak temel bileşenler piyasada erişilebilir durumdadır.",
+          "Proje modüler şekilde geliştirilebilir.",
+          "İlk aşamada hazır geliştirme kartları ve prototipleme yöntemleri kullanılabilir.",
+          "Daha ileri aşamada sistem özel PCB ve optimize edilmiş optik yapı ile geliştirilebilir."
+        ]
+      },
+      {
+        title: "Prototip Stratejisi",
+        bullets: [
+          "Önce temel görüntü aktarımı test edilecektir.",
+          "Ardından reflektif katman üzerindeki görünürlük değerlendirilecektir.",
+          "Son aşamada mekanik yerleşim ve taşınabilirlik iyileştirilecektir."
+        ]
+      }
+    ]
+  },
   challenges: {
     eyebrow: "Risk Yönetimi",
     title: "Karşılaşılabilecek Problemler ve Çözüm Yaklaşımları",
