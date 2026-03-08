@@ -1,0 +1,18 @@
+{
+  "files.exclude": {
+    "**/raw-images": true,
+    "**/source-images": true
+  },
+  "search.exclude": {
+    "**/raw-images": true,
+    "**/source-images": true
+  },
+  "files.watcherExclude": {
+    "**/raw-images/**": true,
+    "**/source-images/**": true,
+    "**/*.psd": true,
+    "**/*.psb": true,
+    "**/*.tif": true,
+    "**/*.tiff": true
+  }
+}
