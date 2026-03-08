@@ -233,7 +233,76 @@ export const siteContent = {
       }
     ],
     totalLabel: "Toplam Tahmini Bütçe",
-    totalValue: 35000
+    totalValue: 35000,
+    breakdownTitle: "Detaylı Maliyet Kırılımı",
+    breakdownDescription:
+      "Aşağıdaki kartlar, mühendislik gerekçeleriyle birlikte temel sistem bileşenlerini ve tahmini maliyet aralıklarını gösterir.",
+    downloadLabel: "CSV olarak indir",
+    breakdown: [
+      {
+        category: "Kontrol Sistemi",
+        material: "Mikrodenetleyici Geliştirme Kartı",
+        cost: "1.000 – 2.000 TL",
+        rationale:
+          "Sistem bileşenleri arasındaki veri iletişimini ve kontrolünü sağlamak"
+      },
+      {
+        category: "Görüntü Sistemi",
+        material: "OLED Display Modülü",
+        cost: "800 – 1.500 TL",
+        rationale:
+          "Kullanıcıya gösterilecek verilerin optik sisteme aktarılması"
+      },
+      {
+        category: "Sensör Sistemi",
+        material: "IMU Hareket Sensörü",
+        cost: "1.000 – 2.000 TL",
+        rationale:
+          "Kullanıcının hareket ve yön bilgisini algılamak"
+      },
+      {
+        category: "Optik Sistem",
+        material: "Reflektif Lens / Optik Cam",
+        cost: "4.000 – 6.000 TL",
+        rationale:
+          "OLED ekran görüntüsünü kullanıcının görüş alanına yansıtmak"
+      },
+      {
+        category: "Güç Sistemi",
+        material: "Lityum Batarya ve Güç Yönetimi Devresi",
+        cost: "2.000 – 3.000 TL",
+        rationale:
+          "Sistemin taşınabilir ve bağımsız çalışmasını sağlamak"
+      },
+      {
+        category: "Elektronik Sistem",
+        material: "Konektör, Kablo ve Bağlantı Elemanları",
+        cost: "2.000 – 3.000 TL",
+        rationale:
+          "Elektronik bileşenler arasında bağlantı sağlamak"
+      },
+      {
+        category: "Elektronik Sistem",
+        material: "Direnç, Kapasitör ve Yardımcı Elektronik Bileşenler",
+        cost: "5.000 – 7.000 TL",
+        rationale:
+          "Devre stabilitesi ve sinyal yönetimi için gerekli yardımcı bileşenler"
+      },
+      {
+        category: "Devre Tasarımı",
+        material: "Özel PCB Tasarımı ve Üretimi",
+        cost: "10.000 – 14.000 TL",
+        rationale:
+          "Tüm sistem bileşenlerini kompakt ve stabil şekilde çalıştırmak"
+      },
+      {
+        category: "Mekanik Sistem",
+        material: "Gözlük Gövdesi ve Mekanik Montaj Parçaları",
+        cost: "3.000 – 5.000 TL",
+        rationale:
+          "Elektronik ve optik bileşenlerin gözlük yapısına entegre edilmesi"
+      }
+    ]
   },
   closing: {
     eyebrow: "Kapanış",

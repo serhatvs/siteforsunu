@@ -645,6 +645,98 @@ a {
     rgba(25, 29, 34, 0.84);
 }
 
+.budget-breakdown {
+  margin-top: 1.35rem;
+  padding: 1.35rem;
+}
+
+.budget-breakdown__summary {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.budget-breakdown__summary::-webkit-details-marker {
+  display: none;
+}
+
+.budget-breakdown__summary p {
+  margin-top: 0.9rem;
+  max-width: 48rem;
+  line-height: 1.7;
+  color: var(--mist-silver);
+}
+
+.budget-breakdown__toggle,
+.budget-breakdown__download,
+.budget-breakdown-card__category {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgba(245, 246, 247, 0.12);
+  background: rgba(245, 246, 247, 0.04);
+  color: var(--platinum-white);
+}
+
+.budget-breakdown__toggle,
+.budget-breakdown__download {
+  min-height: 2.8rem;
+  padding: 0.7rem 1rem;
+  white-space: nowrap;
+}
+
+.budget-breakdown__actions {
+  margin-top: 1.15rem;
+}
+
+.budget-breakdown__download {
+  text-decoration: none;
+}
+
+.budget-breakdown__grid {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.budget-breakdown-card {
+  padding: 1.25rem;
+}
+
+.budget-breakdown-card__category {
+  padding: 0.45rem 0.75rem;
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mist-silver);
+}
+
+.budget-breakdown-card h3 {
+  margin-top: 0.95rem;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  color: var(--platinum-white);
+}
+
+.budget-breakdown-card__cost {
+  display: block;
+  margin-top: 0.9rem;
+  font-size: 1.4rem;
+  line-height: 1.1;
+  color: var(--platinum-white);
+}
+
+.budget-breakdown-card p {
+  margin-top: 0.9rem;
+  line-height: 1.75;
+  color: var(--mist-silver);
+}
+
 .closing {
   padding: 1rem 0 5rem;
 }
@@ -694,6 +786,10 @@ a {
   .budget-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .budget-breakdown__grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 900px) {
@@ -728,6 +824,10 @@ a {
   .frame-list-card,
   .concept-layers__grid {
     grid-template-columns: 1fr;
+  }
+
+  .budget-breakdown__summary {
+    flex-direction: column;
   }
 
   .budget-card--summary {

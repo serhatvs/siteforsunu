@@ -134,6 +134,39 @@ const budgetCardsMarkup = siteContent.budget.items
   )
   .join("");
 
+const budgetCsv = [
+  ["Kategori", "Malzeme", "Tahmini Maliyet (TL)", "Muhendislik Gerekcesi"],
+  ...siteContent.budget.breakdown.map((item) => [
+    item.category,
+    item.material,
+    item.cost,
+    item.rationale
+  ])
+]
+  .map((row) =>
+    row
+      .map((value) => `"${String(value).replaceAll('"', '""')}"`)
+      .join(",")
+  )
+  .join("\n");
+
+const budgetDownloadHref = `data:text/csv;charset=utf-8,${encodeURIComponent(
+  budgetCsv
+)}`;
+
+const budgetBreakdownMarkup = siteContent.budget.breakdown
+  .map(
+    (item) => `
+      <article class="budget-breakdown-card glass-panel" data-reveal>
+        <span class="budget-breakdown-card__category">${item.category}</span>
+        <h3>${item.material}</h3>
+        <strong class="budget-breakdown-card__cost">${item.cost}</strong>
+        <p>${item.rationale}</p>
+      </article>
+    `
+  )
+  .join("");
+
 app.innerHTML = `
   <main class="page-shell">
     <section class="hero">
@@ -246,6 +279,28 @@ app.innerHTML = `
             </p>
           </article>
         </div>
+
+        <details class="budget-breakdown glass-panel" data-reveal>
+          <summary class="budget-breakdown__summary">
+            <div>
+              <span class="panel-badge">${siteContent.budget.breakdownTitle}</span>
+              <p>${siteContent.budget.breakdownDescription}</p>
+            </div>
+            <span class="budget-breakdown__toggle">Aç / Kapat</span>
+          </summary>
+
+          <div class="budget-breakdown__actions">
+            <a
+              class="budget-breakdown__download"
+              href="${budgetDownloadHref}"
+              download="butce-kirimi.csv"
+            >${siteContent.budget.downloadLabel}</a>
+          </div>
+
+          <div class="budget-breakdown__grid">
+            ${budgetBreakdownMarkup}
+          </div>
+        </details>
       </div>
     </section>
 
